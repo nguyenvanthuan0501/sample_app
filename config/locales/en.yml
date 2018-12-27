@@ -2,6 +2,10 @@ en:
   helpers:
     application_helper:
       base_title: "Ruby on Rails Tutorial Sample App"
+  form_error_count:
+    one: "The form contains %{count} error."
+  notification:
+    one: "User not found"
 
   static_pages:
     home:
@@ -34,3 +38,8 @@ en:
       content: "The <a href='http://www.railstutorial.org'>Ruby on Rails Tutorial</a>
         by <a href='http://www.michaelhartl.com'>Michael Hartl</a>"
       title: "News"
+    new:
+      title: "Sign up"
+      password_confirm: "Confirmation"
+      create_account: "Create my account"
+
