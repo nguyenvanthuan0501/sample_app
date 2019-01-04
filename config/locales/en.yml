@@ -1,9 +1,12 @@
 en:
-  base_title: "Ruby on Rails Tutorial Sample App"
+  helpers:
+    application_helper:
+      base_title: "Ruby on Rails Tutorial Sample App"
 
   static_pages:
     home:
       title: "Home"
+      h1: "Welcome to the Sample App"
       content: "This is the home page for the
         <a href='http://www.railstutorial.org/'>Ruby on Rails Tutorial</a>
         sample application."
@@ -27,5 +30,7 @@ en:
       title: "Contact"
       content: "Contact the Ruby on Rails Tutorial about the sample app at the
         <a href='http://www.railstutorial.org/contact'>contact page</a>."
-
-
+    footer:
+      content: "The <a href='http://www.railstutorial.org'>Ruby on Rails Tutorial</a>
+        by <a href='http://www.michaelhartl.com'>Michael Hartl</a>"
+      title: "News"
