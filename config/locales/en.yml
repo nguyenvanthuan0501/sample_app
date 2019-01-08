@@ -46,8 +46,10 @@ en:
     sessions:
       new:
         title: "Log in"
+        remember: "Remember me on this computer"
         new_user: "New user?"
         signup: "Sign up now!"
+        new_user: "New User?"
         error: "Invalid email/password combination"
       profile:
         title: "Profile"

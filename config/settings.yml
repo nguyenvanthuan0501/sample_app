@@ -7,3 +7,11 @@ user:
     min_length: 6
   option:
     size: 80
+  controllers:
+    sessions_controller:
+      remember_true: "1"
+      remember_false: "0"
+  integration:
+    users_login_test:
+      remember_true: "1"
+      remember_false: "0"
