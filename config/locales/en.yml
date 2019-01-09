@@ -1,4 +1,5 @@
 en:
+  banner: "sample app"
   helpers:
     application_helper:
       base_title: "Ruby on Rails Tutorial Sample App"
@@ -6,9 +7,13 @@ en:
     one: "The form contains %{count} error."
   notification:
     one: "User not found"
+    two: "Please log in"
+    three: "You sure?"
   users: "Users"
   account: "Account"
   static_pages:
+    index:
+      title: "All users"
     home:
       title: "Home"
       h1: "Welcome to the Sample App"
@@ -43,6 +48,12 @@ en:
       title: "Sign up"
       password_confirm: "Confirmation"
       create_account: "Create my account"
+    edit:
+      title: "Edit user"
+      save_change: "Save changes"
+      change: <a href='http://gravatar.com/emails' target='_blank'>Change</a>
+      h1: "Update your profile"
+      delete: "delete"
     sessions:
       new:
         title: "Log in"
@@ -53,7 +64,11 @@ en:
         error: "Invalid email/password combination"
       profile:
         title: "Profile"
+        update: "Profile updated"
       setting:
         title: "Setting"
       logout:
         title: "Logout"
+      delete:
+        title: "User deleted"
+        error: "Delete unsuccess"
