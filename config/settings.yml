@@ -7,7 +7,12 @@ user:
     min_length: 6
   option:
     size: 80
+  app:
+    views:
+      size: 50
   controllers:
+    users_controller:
+      per_page: 5
     sessions_controller:
       remember_true: "1"
       remember_false: "0"
