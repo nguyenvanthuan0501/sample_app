@@ -9,6 +9,7 @@ en:
     one: "User not found"
     two: "Please log in"
     three: "You sure?"
+    not_found: "Sorry, the data can not be found"
   users: "Users"
   account: "Account"
   static_pages:
@@ -62,6 +63,7 @@ en:
         signup: "Sign up now!"
         new_user: "New User?"
         error: "Invalid email/password combination"
+        password_reset: "password reset"
       profile:
         title: "Profile"
         update: "Profile updated"
@@ -72,3 +74,21 @@ en:
       delete:
         title: "User deleted"
         error: "Delete unsuccess"
+    activate:
+      title: "Activate"
+      subject: "Account activation"
+      hi: "Hi"
+      content: "Welcome to the Sample App! Click on the link below to activate
+       your account:"
+      info: "Please check your email to activate your account."
+      subject2: "Account activated!"
+      subject_danger: "Invalid activation link"
+    password_reset:
+      title: "Reset password"
+      content: "To reset your password click the link below:"
+      notification: "This link will expire in two hours.If you did not request your
+        password to be reset, please ignore this email and your password will stay as it is."
+      submit: "Update password"
+      error: "can't be empty"
+      success: "Password has been reset."
+      expiredpass: "Password reset has expired."
