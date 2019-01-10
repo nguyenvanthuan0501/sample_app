@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  attr_accsessor :remember_token
+  attr_accessor :remember_token
   before_save{email.downcase!}
   validates :name,  presence: true, length:
     {maximum: Settings.user.name.max_length}
@@ -13,12 +13,12 @@ class User < ApplicationRecord
     {minimum: Settings.user.password.min_length}
   class << self
     def digest string
-    cost = if ActiveModel::SecurePassword.min_cost
-             BCrypt::Engine::MIN_COST
-           else
-             BCrypt::Engine.cost
-           end
-    BCrypt::Password.create(string, cost: cost)
+      cost = if ActiveModel::SecurePassword.min_cost
+               BCrypt::Engine::MIN_COST
+             else
+               BCrypt::Engine.cost
+             end
+      BCrypt::Password.create(string, cost: cost)
     end
 
     def new_token
@@ -32,6 +32,7 @@ class User < ApplicationRecord
   end
 
   def authenticated? remember_token
+    return false if remember_digest.nil?
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
 
