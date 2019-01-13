@@ -1,14 +1,23 @@
 en:
+  banner: "Sample App"
   helpers:
     application_helper:
       base_title: "Ruby on Rails Tutorial Sample App"
   form_error_count:
     one: "The form contains %{count} error."
+    render: "shared/error_messages"
+    render_user: "shared/user_info"
+    render_micropost: "shared/micropost_form"
+    render_feed: "shared/feed"
   notification:
     one: "User not found"
+    two: "Please log in"
+    three: "You sure?"
   users: "Users"
   account: "Account"
   static_pages:
+    index:
+      title: "All users"
     home:
       title: "Home"
       h1: "Welcome to the Sample App"
@@ -43,6 +52,16 @@ en:
       title: "Sign up"
       password_confirm: "Confirmation"
       create_account: "Create my account"
+      password: "Forgot password"
+      email_info: "Email sent with password reset instructions"
+      email_danger: "Email address not found"
+      password_reset: "password reset"
+    edit:
+      title: "Edit user"
+      save_change: "Save changes"
+      change: <a href='http://gravatar.com/emails' target='_blank'>Change</a>
+      h1: "Update your profile"
+      delete: "delete"
     sessions:
       new:
         title: "Log in"
@@ -51,9 +70,40 @@ en:
         signup: "Sign up now!"
         new_user: "New User?"
         error: "Invalid email/password combination"
+        message: "Account not activated. Check your email for the activation link."
       profile:
         title: "Profile"
+        update: "Profile updated"
+        view_profile: "view my profile"
       setting:
         title: "Setting"
       logout:
         title: "Logout"
+      delete:
+        title: "User deleted"
+    activate:
+      title: "Activate"
+      subject: "Account activation"
+      hi: "Hi"
+      content: "Welcome to the Sample App! Click on the link below to activate
+       your account:"
+      info: "Please check your email to activate your account."
+      subject2: "Account activated!"
+      subject_danger: "Invalid activation link"
+    password_reset:
+      title: "Reset password"
+      content: "To reset your password click the link below:"
+      notification: "This link will expire in two hours.If you did not request your
+        password to be reset, please ignore this email and your password will stay as it is."
+      submit: "Update password"
+      error: "can't be empty"
+      success: "Password has been reset."
+      expiredpass: "Password reset has expired."
+    micropost:
+      title: "Micropost Feed"
+      content: "Lorem ipsum"
+      success: "Micropost created!"
+      submit: "Post"
+      delete: "Micropost deleted"
+      picture_size: "should be less than 5MB"
+      alert: "Maximum file size is 5MB. Please choose a smaller file."

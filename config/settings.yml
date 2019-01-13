@@ -7,7 +7,12 @@ user:
     min_length: 6
   option:
     size: 80
+  app:
+    views:
+      size: 50
   controllers:
+    users_controller:
+      per_page: 5
     sessions_controller:
       remember_true: "1"
       remember_false: "0"
@@ -15,3 +20,7 @@ user:
     users_login_test:
       remember_true: "1"
       remember_false: "0"
+  micropost:
+    max_length: 140
+picture:
+  size: 5

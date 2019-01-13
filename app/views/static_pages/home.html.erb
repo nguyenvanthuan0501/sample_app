@@ -1,3 +1,19 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render t("form_error_count.render_user") %>
+      </section>
+      <section class="micropost_form">
+        <%= render t("form_error_count.render_micropost") %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3><%= t("static_pages.micropost.title") %></h3>
+      <%= render t("form_error_count.render_feed") %>
+    </div>
+  </div>
+<% else %>
 <div class="center jumbotron">
   <h1>
     <%= t("static_pages.home.h1") %>
@@ -10,4 +26,7 @@
   <%= link_to "Sign up now!", signup_path, class:"btn btn-lg btn-primary" %>
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Rails logo"), 'http://rubyonrails.org/' %>
+<%= link_to image_tag("rails.png", alt: "Rails logo"),
+  'http://rubyonrails.org/' %>
+
+<% end %>
