@@ -1,0 +1,7 @@
+<h1><%= t "banner" %></h1>
+<p><%= t "static_pages.activate.hi" %> <%= @user.name %>,</p>
+<p>
+  <%= t "static_pages.activate.content" %>
+</p>
+<%= link_to t("static_pages.activate.title"),
+  edit_account_activation_url(@user.activation_token, email: @user.email) %>
