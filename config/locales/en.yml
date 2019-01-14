@@ -9,6 +9,10 @@ en:
     render_user: "shared/user_info"
     render_micropost: "shared/micropost_form"
     render_feed: "shared/feed"
+    render_stat: "shared/stats"
+    render_unfollow: "unfollow"
+    render_follow: "follow"
+    render_fform: "follow_form"
   notification:
     one: "User not found"
     two: "Please log in"
@@ -81,6 +85,7 @@ en:
         title: "Logout"
       delete:
         title: "User deleted"
+        error: "Delete unsucess"
     activate:
       title: "Activate"
       subject: "Account activation"
@@ -105,5 +110,10 @@ en:
       success: "Micropost created!"
       submit: "Post"
       delete: "Micropost deleted"
-      picture_size: "should be less than 5MB"
+      picture_size: "should be less than %{max_size}MB"
       alert: "Maximum file size is 5MB. Please choose a smaller file."
+    follow:
+      following: "Following"
+      follower: "Followers"
+      submit_follow: "Follow"
+      submit_unfollow: "Unfollow"

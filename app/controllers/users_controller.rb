@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: %i(index edit update destroy)
+  before_action :logged_in_user, only: %i(index edit update destroy following,
+    followers)
   before_action :load_user, only: %i(show correct_user edit update destroy)
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
@@ -41,9 +42,27 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user.delete
-    flash[:success] = t "static_pages.sessions.delete.title"
-    redirect_to users_path
+    if @user.delete
+      flash[:success] = t "static_pages.sessions.delete.title"
+      redirect_to users_path
+    else
+      flash[:danger] = t "static_pages.sessions.delete.error"
+      redirect_to root_path
+    end
+  end
+
+  def following
+    @title = t "static_pages.follow.following"
+    @user  = User.find(params[:id])
+    @users = @user.following.paginate(page: params[:page])
+    render :show_follow
+  end
+
+  def followers
+    @title = t "static_pages.follow.follower"
+    @user  = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render :show_follow
   end
 
   private

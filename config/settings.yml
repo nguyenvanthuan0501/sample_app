@@ -10,6 +10,7 @@ user:
   app:
     views:
       size: 50
+      size_gravarta: 30
   controllers:
     users_controller:
       per_page: 5
